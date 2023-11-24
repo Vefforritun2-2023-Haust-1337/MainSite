@@ -12,6 +12,7 @@ function creoDiv(klas = "",text = "")
     {
         elem.textContent = text
     }
+    return elem
 }
 
 function creoHref(klas = "",text = "",href = "")
@@ -27,4 +28,12 @@ function creoHref(klas = "",text = "",href = "")
     {
         elem.textContent = text
     }
+    return elem
+}
+
+function regoElem(children = [], paren)
+{
+    children.forEach(child =>{
+        paren.appendchild(child)
+    })
 }
