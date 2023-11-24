@@ -1,6 +1,6 @@
 "use strict"
 
-function creoDiv(klas = "",text = "")
+export function creoDiv(klas = "",text = "")
 {
     let elem
     elem = document.createElement("div")
@@ -15,7 +15,7 @@ function creoDiv(klas = "",text = "")
     return elem
 }
 
-function creoHref(klas = "",text = "",href = "")
+export function creoHref(klas = "",text = "",href = "")
 {
     let elem
     elem = document.createElement("a")
@@ -31,7 +31,7 @@ function creoHref(klas = "",text = "",href = "")
     return elem
 }
 
-function regoElem(children = [], paren)
+export function regoElem(children = [], paren)
 {
     children.forEach(child =>{
         paren.appendchild(child)
