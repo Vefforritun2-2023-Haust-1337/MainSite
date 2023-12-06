@@ -2,38 +2,38 @@
 
 export function creoDiv(klas = "",text = "")
 {
-    let elem
-    elem = document.createElement("div")
+    let elem;
+    elem = document.createElement("div");
     if (!(klas == ""))
     {
-        elem.className = klas
+        elem.className = klas;
     }
     if (!(text == ""))
     {
-        elem.textContent = text
+        elem.textContent = text;
     }
-    return elem
+    return elem;
 }
 
 export function creoHref(klas = "",text = "",href = "")
 {
-    let elem
-    elem = document.createElement("a")
-    elem.href = href
+    let elem;
+    elem = document.createElement("a");
+    elem.href = href;
     if (!(klas == ""))
     {
-        elem.className = klas
+        elem.className = klas;
     }
     if (!(text == ""))
     {
-        elem.textContent = text
+        elem.textContent = text;
     }
-    return elem
+    return elem;
 }
 
 export function regoElem(children = [], paren)
 {
     children.forEach(child =>{
-        paren.appendchild(child)
+        paren.appendchild(child);
     })
 }
