@@ -218,7 +218,8 @@
            "email": "william.anderson@example.com",
            "phone": "+1 (555) 678-9012"
          }
-       },{
+       },
+       {
          "id": 21,
          "name": "Dr. Allison Parker",
          "specialty": "Psychology",
