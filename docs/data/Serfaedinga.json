@@ -1,0 +1,442 @@
+{
+   "specialists": [
+      {
+        "id": 1,
+        "name": "Dr. Emily Johnson",
+        "specialty": "Cardiology",
+        "hospital": "City General Hospital",
+        "location": "New York",
+        "contact": {
+          "email": "emily.johnson@example.com",
+          "phone": "+1 (555) 123-4567"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Dr. Mark Rodriguez",
+        "specialty": "Neurology",
+        "hospital": "Central Hospital",
+        "location": "Los Angeles",
+        "contact": {
+          "email": "mark.rodriguez@example.com",
+          "phone": "+1 (555) 987-6543"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Dr. Sarah Lee",
+        "specialty": "Pediatrics",
+        "hospital": "Children's Hospital",
+        "location": "Chicago",
+        "contact": {
+          "email": "sarah.lee@example.com",
+          "phone": "+1 (555) 555-5555"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Dr. Michael Wang",
+        "specialty": "Orthopedics",
+        "hospital": "OrthoCare Clinic",
+        "location": "Houston",
+        "contact": {
+          "email": "michael.wang@example.com",
+          "phone": "+1 (555) 222-3333"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Dr. Ashley Patel",
+        "specialty": "Oncology",
+        "hospital": "Hope Cancer Center",
+        "location": "San Francisco",
+        "contact": {
+          "email": "ashley.patel@example.com",
+          "phone": "+1 (555) 876-5432"
+        }
+      },
+      {
+        "id": 6,
+        "name": "Dr. Robert Garcia",
+        "specialty": "Dermatology",
+        "hospital": "SkinCare Clinic",
+        "location": "Miami",
+        "contact": {
+          "email": "robert.garcia@example.com",
+          "phone": "+1 (555) 111-9999"
+        }
+      },
+      {
+        "id": 7,
+        "name": "Dr. Jennifer Wong",
+        "specialty": "Psychiatry",
+        "hospital": "MindCare Hospital",
+        "location": "Seattle",
+        "contact": {
+          "email": "jennifer.wong@example.com",
+          "phone": "+1 (555) 777-8888"
+        }
+      },
+      {
+        "id": 8,
+        "name": "Dr. Daniel Ramirez",
+        "specialty": "Urology",
+        "hospital": "UroHealth Clinic",
+        "location": "Dallas",
+        "contact": {
+          "email": "daniel.ramirez@example.com",
+          "phone": "+1 (555) 444-0000"
+        }
+      },
+      {
+        "id": 9,
+        "name": "Dr. Karen Taylor",
+        "specialty": "Gynecology",
+        "hospital": "Women's Care Center",
+        "location": "Boston",
+        "contact": {
+          "email": "karen.taylor@example.com",
+          "phone": "+1 (555) 333-7890"
+        }
+      },
+      {
+        "id": 10,
+        "name": "Dr. Thomas Clark",
+        "specialty": "Ophthalmology",
+        "hospital": "VisionCare Clinic",
+        "location": "Denver",
+        "contact": {
+          "email": "thomas.clark@example.com",
+          "phone": "+1 (555) 222-1111"
+        }
+      },
+      {
+        "id": 11,
+        "name": "Dr. Rachel Adams",
+        "specialty": "Allergy & Immunology",
+        "hospital": "Allergy Relief Center",
+        "location": "Atlanta",
+        "contact": {
+          "email": "rachel.adams@example.com",
+          "phone": "+1 (555) 789-4567"
+        }
+      },
+      {
+        "id": 12,
+        "name": "Dr. Jason Cooper",
+        "specialty": "Gastroenterology",
+        "hospital": "Gastro Health Clinic",
+        "location": "Philadelphia",
+        "contact": {
+          "email": "jason.cooper@example.com",
+          "phone": "+1 (555) 654-3210"
+        }
+      },
+      {
+        "id": 13,
+        "name": "Dr. Samantha White",
+        "specialty": "Pulmonology",
+        "hospital": "BreatheWell Hospital",
+        "location": "Phoenix",
+        "contact": {
+          "email": "samantha.white@example.com",
+          "phone": "+1 (555) 987-6543"
+        }
+      },
+      {
+        "id": 14,
+        "name": "Dr. Eric Turner",
+        "specialty": "Rheumatology",
+        "hospital": "JointCare Center",
+        "location": "San Diego",
+        "contact": {
+          "email": "eric.turner@example.com",
+          "phone": "+1 (555) 222-3333"
+        }
+      },
+      {
+        "id": 15,
+        "name": "Dr. Michelle Baker",
+        "specialty": "Endocrinology",
+        "hospital": "EndoWell Clinic",
+        "location": "Detroit",
+        "contact": {
+          "email": "michelle.baker@example.com",
+          "phone": "+1 (555) 777-8888"
+        }
+      },
+      {
+        "id": 16,
+        "name": "Dr. Jonathan Smith",
+        "specialty": "Hematology",
+        "hospital": "BloodCare Center",
+        "location": "Minneapolis",
+        "contact": {
+          "email": "jonathan.smith@example.com",
+          "phone": "+1 (555) 123-4567"
+        }
+      },    {
+         "id": 17,
+         "name": "Dr. Olivia Turner",
+         "specialty": "Obstetrics",
+         "hospital": "New Life Hospital",
+         "location": "Austin",
+         "contact": {
+           "email": "olivia.turner@example.com",
+           "phone": "+1 (555) 890-1234"
+         }
+       },
+       {
+         "id": 18,
+         "name": "Dr. Christopher Harris",
+         "specialty": "ENT (Otorhinolaryngology)",
+         "hospital": "Ear Nose Throat Clinic",
+         "location": "Portland",
+         "contact": {
+           "email": "christopher.harris@example.com",
+           "phone": "+1 (555) 567-8901"
+         }
+       },
+       {
+         "id": 19,
+         "name": "Dr. Sophia Martinez",
+         "specialty": "Family Medicine",
+         "hospital": "Healthy Living Clinic",
+         "location": "Orlando",
+         "contact": {
+           "email": "sophia.martinez@example.com",
+           "phone": "+1 (555) 234-5678"
+         }
+       },
+       {
+         "id": 20,
+         "name": "Dr. William Anderson",
+         "specialty": "Physical Therapy",
+         "hospital": "RehabCare Center",
+         "location": "Nashville",
+         "contact": {
+           "email": "william.anderson@example.com",
+           "phone": "+1 (555) 678-9012"
+         }
+       },{
+         "id": 21,
+         "name": "Dr. Allison Parker",
+         "specialty": "Psychology",
+         "institution": "MindShift Therapy",
+         "location": "Toronto",
+         "contact": {
+           "email": "allison.parker@example.com",
+           "phone": "+1 (123) 456-7890"
+         }
+       },
+       {
+         "id": 22,
+         "name": "Dr. Samuel Cohen",
+         "specialty": "Astrophysics",
+         "institution": "Stellar Research Institute",
+         "location": "Houston",
+         "contact": {
+           "email": "samuel.cohen@example.com",
+           "phone": "+1 (234) 567-8901"
+         }
+       },
+       {
+         "id": 23,
+         "name": "Dr. Maya Johnson",
+         "specialty": "Environmental Science",
+         "institution": "EarthCare Foundation",
+         "location": "Vancouver",
+         "contact": {
+           "email": "maya.johnson@example.com",
+           "phone": "+1 (345) 678-9012"
+         }
+       },
+       {
+         "id": 24,
+         "name": "Dr. William Chang",
+         "specialty": "Computer Science",
+         "institution": "Tech Innovations Inc.",
+         "location": "San Francisco",
+         "contact": {
+           "email": "william.chang@example.com",
+           "phone": "+1 (456) 789-0123"
+         }
+       },
+       {
+         "id": 25,
+         "name": "Dr. Emily Roberts",
+         "specialty": "Economics",
+         "institution": "Global Finance Group",
+         "location": "New York",
+         "contact": {
+           "email": "emily.roberts@example.com",
+           "phone": "+1 (567) 890-1234"
+         }
+       },
+       {
+         "id": 26,
+         "name": "Dr. Alexander Wilson",
+         "specialty": "Political Science",
+         "institution": "PolicyThink Tank",
+         "location": "Washington D.C.",
+         "contact": {
+           "email": "alexander.wilson@example.com",
+           "phone": "+1 (678) 901-2345"
+         }
+       },
+       {
+         "id": 27,
+         "name": "Dr. Sophie Brown",
+         "specialty": "Linguistics",
+         "institution": "Language Studies Center",
+         "location": "Paris",
+         "contact": {
+           "email": "sophie.brown@example.com",
+           "phone": "+33 123 456 789"
+         }
+       },
+       {
+         "id": 28,
+         "name": "Dr. Oliver Taylor",
+         "specialty": "Robotics",
+         "institution": "TechMech Innovations",
+         "location": "Tokyo",
+         "contact": {
+           "email": "oliver.taylor@example.com",
+           "phone": "+81 234-567-890"
+         }
+       },
+       {
+         "id": 29,
+         "name": "Dr. Emma Clark",
+         "specialty": "Archaeology",
+         "institution": "Ancient Discoveries Institute",
+         "location": "Rome",
+         "contact": {
+           "email": "emma.clark@example.com",
+           "phone": "+39 345 678 901"
+         }
+       },
+       {
+         "id": 30,
+         "name": "Dr. James Garcia",
+         "specialty": "Astronomy",
+         "institution": "Celestial Observatory",
+         "location": "Sydney",
+         "contact": {
+           "email": "james.garcia@example.com",
+           "phone": "+61 456 789 012"
+         }
+       },
+       {
+         "id": 31,
+         "name": "Dr. Lily Adams",
+         "specialty": "Art History",
+         "institution": "Art Museums Association",
+         "location": "Florence",
+         "contact": {
+           "email": "lily.adams@example.com",
+           "phone": "+39 567 890 123"
+         }
+       },
+       {
+         "id": 32,
+         "name": "Dr. Noah Martin",
+         "specialty": "Philosophy",
+         "institution": "Ethics & Morals Institute",
+         "location": "Athens",
+         "contact": {
+           "email": "noah.martin@example.com",
+           "phone": "+30 678 901 234"
+         }
+       },
+       {
+         "id": 33,
+         "name": "Dr. Chloe Turner",
+         "specialty": "Sociology",
+         "institution": "Social Dynamics Research",
+         "location": "Berlin",
+         "contact": {
+           "email": "chloe.turner@example.com",
+           "phone": "+49 123 456 789"
+         }
+       },
+       {
+         "id": 34,
+         "name": "Dr. Ethan Wright",
+         "specialty": "Chemistry",
+         "institution": "Molecular Labs Inc.",
+         "location": "Moscow",
+         "contact": {
+           "email": "ethan.wright@example.com",
+           "phone": "+7 234 567 890"
+         }
+       },
+       {
+         "id": 35,
+         "name": "Dr. Mia Rodriguez",
+         "specialty": "Literature",
+         "institution": "Bookworm Society",
+         "location": "London",
+         "contact": {
+           "email": "mia.rodriguez@example.com",
+           "phone": "+44 567 890 123"
+         }
+       },
+       {
+         "id": 36,
+         "name": "Dr. Adam Lewis",
+         "specialty": "Musicology",
+         "institution": "Harmony Research Center",
+         "location": "Vienna",
+         "contact": {
+           "email": "adam.lewis@example.com",
+           "phone": "+43 678 901 234"
+         }
+       },
+       {
+         "id": 37,
+         "name": "Dr. Ava Hill",
+         "specialty": "Education",
+         "institution": "Learning Innovations Institute",
+         "location": "Melbourne",
+         "contact": {
+           "email": "ava.hill@example.com",
+           "phone": "+61 123 456 789"
+         }
+       },
+       {
+         "id": 38,
+         "name": "Dr. Benjamin Baker",
+         "specialty": "Physics",
+         "institution": "Quantum Research Center",
+         "location": "Geneva",
+         "contact": {
+           "email": "benjamin.baker@example.com",
+           "phone": "+41 234 567 890"
+         }
+       },
+       {
+         "id": 39,
+         "name": "Dr. Isabella Moore",
+         "specialty": "Mathematics",
+         "institution": "Numeric Solutions Group",
+         "location": "Madrid",
+         "contact": {
+           "email": "isabella.moore@example.com",
+           "phone": "+34 567 890 123"
+         }
+       },
+       {
+         "id": 40,
+         "name": "Dr. Jacob Foster",
+         "specialty": "Geology",
+         "institution": "Earth Sciences Foundation",
+         "location": "Dubai",
+         "contact": {
+           "email": "jacob.foster@example.com",
+           "phone": "+971 123 456 789"
+         }
+       }
+   ]
+}
