@@ -438,6 +438,225 @@
            "email": "jacob.foster@example.com",
            "phone": "+971 123 456 789"
          }
+       },{
+         "id": 41,
+         "name": "Mr. David Johnson",
+         "specialty": "Financial Advisor",
+         "company": "Wealth Management Inc.",
+         "location": "New York",
+         "contact": {
+           "email": "david.johnson@example.com",
+           "phone": "+1 (123) 456-7890"
+         }
+       },
+       {
+         "id": 42,
+         "name": "Ms. Sarah Adams",
+         "specialty": "Marketing Manager",
+         "company": "Market Boosters",
+         "location": "Los Angeles",
+         "contact": {
+           "email": "sarah.adams@example.com",
+           "phone": "+1 (234) 567-8901"
+         }
+       },
+       {
+         "id": 43,
+         "name": "Mr. Michael Carter",
+         "specialty": "Human Resources Manager",
+         "company": "Talent Solutions Group",
+         "location": "Chicago",
+         "contact": {
+           "email": "michael.carter@example.com",
+           "phone": "+1 (345) 678-9012"
+         }
+       },
+       {
+         "id": 44,
+         "name": "Ms. Emily Parker",
+         "specialty": "Public Relations Specialist",
+         "company": "MediaWorks PR",
+         "location": "San Francisco",
+         "contact": {
+           "email": "emily.parker@example.com",
+           "phone": "+1 (456) 789-0123"
+         }
+       },
+       {
+         "id": 45,
+         "name": "Mr. Daniel Clark",
+         "specialty": "Business Consultant",
+         "company": "Corporate Strategies Inc.",
+         "location": "London",
+         "contact": {
+           "email": "daniel.clark@example.com",
+           "phone": "+44 567 890 123"
+         }
+       },
+       {
+         "id": 46,
+         "name": "Ms. Jessica Turner",
+         "specialty": "Event Planner",
+         "company": "EventPro Planners",
+         "location": "Miami",
+         "contact": {
+           "email": "jessica.turner@example.com",
+           "phone": "+1 (678) 901-2345"
+         }
+       },
+       {
+         "id": 47,
+         "name": "Mr. Andrew Collins",
+         "specialty": "Graphic Designer",
+         "company": "DesignCraft Inc.",
+         "location": "Sydney",
+         "contact": {
+           "email": "andrew.collins@example.com",
+           "phone": "+61 123 456 789"
+         }
+       },
+       {
+         "id": 48,
+         "name": "Ms. Olivia Hill",
+         "specialty": "Writer & Editor",
+         "company": "WordCraft Solutions",
+         "location": "Paris",
+         "contact": {
+           "email": "olivia.hill@example.com",
+           "phone": "+33 234 567 890"
+         }
+       },
+       {
+         "id": 49,
+         "name": "Mr. William Baker",
+         "specialty": "Real Estate Agent",
+         "company": "Prime Realty Solutions",
+         "location": "Dubai",
+         "contact": {
+           "email": "william.baker@example.com",
+           "phone": "+971 876 543 210"
+         }
+       },
+       {
+         "id": 50,
+         "name": "Ms. Sophia Martinez",
+         "specialty": "Fashion Stylist",
+         "company": "ChicStyle Consultants",
+         "location": "Tokyo",
+         "contact": {
+           "email": "sophia.martinez@example.com",
+           "phone": "+81 345-678-901"
+         }
+       },
+       {
+         "id": 51,
+         "name": "Mr. Lucas Wright",
+         "specialty": "Journalist",
+         "company": "Presswise Media",
+         "location": "Washington D.C.",
+         "contact": {
+           "email": "lucas.wright@example.com",
+           "phone": "+1 (987) 654-3210"
+         }
+       },
+       {
+         "id": 52,
+         "name": "Ms. Mia Garcia",
+         "specialty": "Social Media Manager",
+         "company": "SocialSphere Inc.",
+         "location": "Los Angeles",
+         "contact": {
+           "email": "mia.garcia@example.com",
+           "phone": "+1 (654) 321-0987"
+         }
+       },
+       {
+         "id": 53,
+         "name": "Mr. Jack Turner",
+         "specialty": "Photographer",
+         "company": "SnapClick Studios",
+         "location": "London",
+         "contact": {
+           "email": "jack.turner@example.com",
+           "phone": "+44 210 987 6543"
+         }
+       },
+       {
+         "id": 54,
+         "name": "Ms. Chloe Moore",
+         "specialty": "Musician",
+         "company": "Harmony Sounds",
+         "location": "New York",
+         "contact": {
+           "email": "chloe.moore@example.com",
+           "phone": "+1 (876) 543-2109"
+         }
+       },
+       {
+         "id": 55,
+         "name": "Mr. Ethan Parker",
+         "specialty": "Artist",
+         "company": "Artistic Visions",
+         "location": "Los Angeles",
+         "contact": {
+           "email": "ethan.parker@example.com",
+           "phone": "+1 (543) 210-9876"
+         }
+       },
+       {
+         "id": 56,
+         "name": "Ms. Lily Adams",
+         "specialty": "Educator",
+         "company": "Enlightened Minds Institute",
+         "location": "London",
+         "contact": {
+           "email": "lily.adams@example.com",
+           "phone": "+44 567 890 123"
+         }
+       },
+       {
+         "id": 57,
+         "name": "Mr. Oliver Turner",
+         "specialty": "Chef",
+         "company": "Gourmet Delights",
+         "location": "New York",
+         "contact": {
+           "email": "oliver.turner@example.com",
+           "phone": "+1 (876) 543-2109"
+         }
+       },
+       {
+         "id": 58,
+         "name": "Ms. Grace Harris",
+         "specialty": "Librarian",
+         "company": "Book Haven",
+         "location": "Chicago",
+         "contact": {
+           "email": "grace.harris@example.com",
+           "phone": "+1 (345) 678-9012"
+         }
+       },
+       {
+         "id": 59,
+         "name": "Mr. Samuel Collins",
+         "specialty": "Translator",
+         "company": "Language Bridge",
+         "location": "Paris",
+         "contact": {
+           "email": "samuel.collins@example.com",
+           "phone": "+33 234 567 890"
+         }
+       },
+       {
+         "id": 60,
+         "name": "Ms. Ava Hill",
+         "specialty": "Tour Guide",
+         "company": "DiscoverMore Tours",
+         "location": "Sydney",
+         "contact": {
+           "email": "ava.hill@example.com",
+           "phone": "+61 123 456 789"
+         }
        }
    ]
 }
