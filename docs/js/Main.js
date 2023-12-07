@@ -1,5 +1,7 @@
 "use strict"
 
+const specialList = document.querySelector("#Specialists");
+
 //import { creoDiv, creoHref, regoElem } from "./Functions"
 function creoDiv(klas = "",text = "")
 {
@@ -32,7 +34,7 @@ function creoHref(klas = "",text = "",href = "")
     return elem;
 }
 
-function regoElem(children = [], paren = creoDiv())
+function regoElem(children = [], paren)
 {
     children.forEach(child =>{
         paren.appendChild(child);
@@ -49,6 +51,7 @@ function creoNavBar()
         creoHref("navbutton","Verkefni","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
     ]
     regoElem(hrefs,navBarDiv);
+    return navBarDiv;
 }
 
 async function loadJson(file = "/data.json")
@@ -89,17 +92,18 @@ function startContent(data,key)
     return entries;
 }
 
-async function init(data = "Mainsite/docs/data/Serfaedinga.json")
+async function init(data = "/docs/data/Serfaedinga.json")
 {
     let jsonData = await loadJson(data);
     let list = creoDiv("list");
     let entries = startContent(jsonData,"specialists");
-    regoElem (list,entries);
+    entries.forEach(elem =>{
+        list.appendChild(elem["element"])
+    })
     specialList.appendChild(list);
 }
 
-let specialList = document.querySelector("#Specialists");
-if (typeof specialList != "undefined")
+if (specialList)
 {
     init();
 }
