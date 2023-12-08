@@ -1,8 +1,11 @@
 "use strict"
 
 const specialList = document.querySelector("#Specialists");
+const specialRegi = document.querySelector("#Register");
+const navbar = document.querySelector("#Navbar");
+const taskList = document.querySelector("#Tasks");
+const leaderboard = document.querySelector("#Board");
 
-//import { creoDiv, creoHref, regoElem } from "./Functions"
 function creoDiv(klas = "",text = "")
 {
     let elem;
@@ -92,7 +95,7 @@ function startContent(data,key)
     return entries;
 }
 
-async function init(data = "/docs/data/Serfaedinga.json")
+async function specialist(data = "/docs/data/Serfaedinga.json")
 {
     let jsonData = await loadJson(data);
     let list = creoDiv("list");
@@ -105,5 +108,5 @@ async function init(data = "/docs/data/Serfaedinga.json")
 
 if (specialList)
 {
-    init();
+    specialist();
 }
