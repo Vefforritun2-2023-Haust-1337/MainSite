@@ -47,9 +47,9 @@ function creoNavBar()
 {
     let navBarDiv = creoDiv("topnav");
     let hrefs = [
-        creoHref("icon-home3","Heim","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
-        creoHref("icon-user-tie","Um Okkur","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
-        creoHref("icon-bubble","Sérfræðingar","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
+        creoHref("icon-home3","Heim","./MainIndex.html"),
+        creoHref("icon-user-tie","Um Okkur","./aboutMe.html"),
+        creoHref("icon-bubble","Sérfræðingar","./specialists.html"),
         creoHref("icon-info","Verkefni","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
     ]
     regoElem(hrefs,navBarDiv);
