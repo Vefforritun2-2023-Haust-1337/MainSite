@@ -48,9 +48,9 @@ function creoNavBar()
     let navBarDiv = creoDiv("topnav");
     let hrefs = [
         creoHref("icon-home3","Heim","./MainIndex.html"),
-        creoHref("icon-user-tie","Um Okkur","./aboutMe.html"),
-        creoHref("icon-bubble","Sérfræðingar","./specialists.html"),
-        creoHref("icon-info","Verkefni","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
+        creoHref("icon-info","Um Okkur","./aboutMe.html"),
+        creoHref("icon-user-tie","Sérfræðingar","./specialists.html"),
+        creoHref("icon-bubble","Verkefni","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
     ]
     regoElem(hrefs,navBarDiv);
     navbar.appendChild(navBarDiv);
