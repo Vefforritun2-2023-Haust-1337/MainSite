@@ -23,8 +23,7 @@ function creoDiv(klas = "",text = "")
 
 function creoHref(klas = "",text = "",href = "")
 {
-    let elem;
-    elem = document.createElement("a");
+    let elem = document.createElement("a");
     elem.href = href;
     if (!(klas == ""))
     {
@@ -46,15 +45,15 @@ function regoElem(children = [], paren)
 
 function creoNavBar()
 {
-    let navBarDiv = creoDiv("navbar");
+    let navBarDiv = creoDiv("topnav");
     let hrefs = [
-        creoHref("navbutton","Heim","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
-        creoHref("navbutton","Um Okkur","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
-        creoHref("navbutton","Sérfræðingar","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
-        creoHref("navbutton","Verkefni","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
+        creoHref("icon-home3","Heim","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
+        creoHref("icon-user-tie","Um Okkur","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
+        creoHref("icon-bubble","Sérfræðingar","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html"),
+        creoHref("icon-info","Verkefni","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
     ]
     regoElem(hrefs,navBarDiv);
-    return navBarDiv;
+    navbar.appendChild(navBarDiv);
 }
 
 async function loadJson(file = "/data.json")
@@ -106,7 +105,13 @@ async function specialist(data = "/docs/data/Serfaedinga.json")
     specialList.appendChild(list);
 }
 
+if (navbar)
+{
+    creoNavBar();
+}
+
 if (specialList)
 {
     specialist();
 }
+
