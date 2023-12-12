@@ -94,7 +94,7 @@ function startContent(data,key)
     return entries;
 }
 
-async function specialist(data = "/docs/data/Serfaedinga.json")
+async function specialist(data = "./data/Serfaedinga.json")
 {
     let jsonData = await loadJson(data);
     let list = creoDiv("list");
