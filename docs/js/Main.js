@@ -94,15 +94,23 @@ function startContent(data,key)
     return entries;
 }
 
-async function specialist(data = "./data/Serfaedinga.json")
+async function creoDatalist(zone = creoDiv(),dataset = "specialists",data = "./data/Serfaedinga.json")
 {
     let jsonData = await loadJson(data);
     let list = creoDiv("list");
-    let entries = startContent(jsonData,"specialists");
+    let entries = startContent(jsonData,dataset);
     entries.forEach(elem =>{
         list.appendChild(elem["element"])
     })
-    specialList.appendChild(list);
+    zone.appendChild(list);
+}
+
+function register()
+{
+    let elems = [
+        creoDiv("paragrah","Register as a specialist here."),
+        creoHref("button","Register","./specialistsForm.html")];
+    regoElem(elems,specialRegi);
 }
 
 if (navbar)
@@ -112,6 +120,15 @@ if (navbar)
 
 if (specialList)
 {
-    specialist();
+    creoDatalist(specialList);
 }
 
+if(specialRegi)
+{
+    register();
+}
+
+if (leaderboard)
+{
+    creoDatalist(leaderboard,"contracts");
+}

@@ -658,5 +658,277 @@
            "phone": "+61 123 456 789"
          }
        }
+   ],
+   "contracts": [
+    {
+      "id": 1,
+      "specialist_id": 1,
+      "job_title": "Financial Planning Consultation",
+      "description": "Provide advice on investment strategies.",
+      "duration": "3 sessions",
+      "location": "Client's Office",
+      "payment": "$500 per session"
+    },
+    {
+      "id": 2,
+      "specialist_id": 2,
+      "job_title": "Marketing Campaign Development",
+      "description": "Create a comprehensive marketing plan.",
+      "duration": "2 months",
+      "location": "Remote",
+      "payment": "$8000 for the project"
+    },
+    {
+      "id": 3,
+      "specialist_id": 3,
+      "job_title": "HR Strategy Implementation",
+      "description": "Assist in implementing HR policies.",
+      "duration": "6 weeks",
+      "location": "Company Headquarters",
+      "payment": "$6000 for the project"
+    },
+    {
+      "id": 4,
+      "specialist_id": 4,
+      "job_title": "PR Campaign Launch",
+      "description": "Coordinate the launch of a PR campaign.",
+      "duration": "1 month",
+      "location": "Multiple locations",
+      "payment": "$7000 for the project"
+    },
+    {
+      "id": 5,
+      "specialist_id": 5,
+      "job_title": "Business Consulting Services",
+      "description": "Offer consulting services to a startup.",
+      "duration": "Ongoing",
+      "location": "Client's Office",
+      "payment": "$10000 per month"
+    },
+    {
+      "id": 6,
+      "specialist_id": 6,
+      "job_title": "Event Planning for Gala",
+      "description": "Plan and execute a fundraising gala.",
+      "duration": "3 months",
+      "location": "Event Venue",
+      "payment": "$12000 for the project"
+    },
+    {
+      "id": 7,
+      "specialist_id": 7,
+      "job_title": "Graphic Design Services",
+      "description": "Design promotional materials.",
+      "duration": "1 month",
+      "location": "Remote",
+      "payment": "$4000 for the project"
+    },
+    {
+      "id": 8,
+      "specialist_id": 8,
+      "job_title": "Editing Services",
+      "description": "Edit a novel manuscript.",
+      "duration": "2 months",
+      "location": "Remote",
+      "payment": "$6000 for the project"
+    },
+    {
+      "id": 9,
+      "specialist_id": 9,
+      "job_title": "Real Estate Consultation",
+      "description": "Assist in property investment decisions.",
+      "duration": "4 sessions",
+      "location": "Client's Office",
+      "payment": "$700 per session"
+    },
+    {
+      "id": 10,
+      "specialist_id": 10,
+      "job_title": "Fashion Styling for Photoshoot",
+      "description": "Style models for a fashion photoshoot.",
+      "duration": "1 week",
+      "location": "Studio",
+      "payment": "$5000 for the project"
+    },
+    {
+      "id": 11,
+      "specialist_id": 11,
+      "job_title": "Journalistic Coverage",
+      "description": "Cover a series of events for a news outlet.",
+      "duration": "2 months",
+      "location": "Varied locations",
+      "payment": "$6000 for the project"
+    },
+    {
+      "id": 12,
+      "specialist_id": 12,
+      "job_title": "Social Media Management",
+      "description": "Handle social media accounts for a business.",
+      "duration": "3 months",
+      "location": "Remote",
+      "payment": "$5000 per month"
+    },
+    {
+      "id": 13,
+      "specialist_id": 13,
+      "job_title": "Photography Services",
+      "description": "Photograph a series of events.",
+      "duration": "1 month",
+      "location": "Varied locations",
+      "payment": "$8000 for the project"
+    },
+    {
+      "id": 14,
+      "specialist_id": 14,
+      "job_title": "Music Performance",
+      "description": "Perform at a live event.",
+      "duration": "1 night",
+      "location": "Concert Hall",
+      "payment": "$3000 for the performance"
+    },
+    {
+      "id": 15,
+      "specialist_id": 15,
+      "job_title": "Art Exhibition",
+      "description": "Showcase artwork at an exhibition.",
+      "duration": "1 week",
+      "location": "Art Gallery",
+      "payment": "$4000 for the event"
+    },
+    {
+      "id": 16,
+      "specialist_id": 16,
+      "job_title": "Educational Seminar",
+      "description": "Lead a seminar on educational practices.",
+      "duration": "1 day",
+      "location": "University Campus",
+      "payment": "$2000 for the seminar"
+    },
+    {
+      "id": 17,
+      "specialist_id": 17,
+      "job_title": "Culinary Workshop",
+      "description": "Conduct a cooking workshop.",
+      "duration": "2 days",
+      "location": "Culinary Institute",
+      "payment": "$3500 for the workshop"
+    },
+    {
+      "id": 18,
+      "specialist_id": 18,
+      "job_title": "Library Management Consultation",
+      "description": "Consult on library organization.",
+      "duration": "3 sessions",
+      "location": "Library",
+      "payment": "$1000 per session"
+    },
+    {
+      "id": 19,
+      "specialist_id": 19,
+      "job_title": "Translation Services",
+      "description": "Translate documents from one language to another.",
+      "duration": "1 month",
+      "location": "Remote",
+      "payment": "$5000 for the project"
+    },
+    {
+      "id": 20,
+      "specialist_id": 20,
+      "job_title": "Tour Guiding Services",
+      "description": "Guide tourists in a city tour.",
+      "duration": "1 week",
+      "location": "City Center",
+      "payment": "$2500 for the week"
+    },
+    {
+      "id": 21,
+      "specialist_id": 0,
+      "job_title": "Financial Advisory Workshop",
+      "description": "Conduct a workshop on personal finance.",
+      "duration": "2 days",
+      "location": "Conference Center",
+      "payment": "$4000 for the workshop"
+    },
+    {
+      "id": 22,
+      "specialist_id": 0,
+      "job_title": "Digital Marketing Strategy Consultation",
+      "description": "Advise on digital marketing strategies.",
+      "duration": "5 sessions",
+      "location": "Client's Office",
+      "payment": "$1200 per session"
+    },
+    {
+      "id": 23,
+      "specialist_id": 0,
+      "job_title": "Employee Engagement Program",
+      "description": "Develop an employee engagement plan.",
+      "duration": "3 months",
+      "location": "Company Headquarters",
+      "payment": "$10000 for the project"
+    },
+    {
+      "id": 24,
+      "specialist_id": 0,
+      "job_title": "Public Relations Campaign Management",
+      "description": "Manage a PR campaign for a product launch.",
+      "duration": "1 month",
+      "location": "Company Office",
+      "payment": "$8000 for the project"
+    },
+    {
+      "id": 25,
+      "specialist_id": 0,
+      "job_title": "Small Business Consulting Services",
+      "description": "Consult small businesses on growth strategies.",
+      "duration": "Ongoing",
+      "location": "Client Meetings",
+      "payment": "$1500 per month"
+    },
+    {
+      "id": 26,
+      "specialist_id": 0,
+      "job_title": "Event Planning for Charity Fundraiser",
+      "description": "Plan a fundraising event for a charitable cause.",
+      "duration": "2 months",
+      "location": "Event Venue",
+      "payment": "$10000 for the project"
+    },
+    {
+      "id": 27,
+      "specialist_id": 0,
+      "job_title": "Artwork Design for Exhibition",
+      "description": "Create artwork for an upcoming art exhibition.",
+      "duration": "3 weeks",
+      "location": "Art Gallery",
+      "payment": "$6000 for the project"
+    },
+    {
+      "id": 28,
+      "specialist_id": 0,
+      "job_title": "Music Performance at Corporate Event",
+      "description": "Perform live music at a corporate event.",
+      "duration": "1 night",
+      "location": "Corporate Office",
+      "payment": "$3000 for the performance"
+    },
+    {
+      "id": 29,
+      "specialist_id": 0,
+      "job_title": "Educational Workshop on Language Learning",
+      "description": "Conduct a workshop on language learning techniques.",
+      "duration": "1 day",
+      "location": "Language Institute",
+      "payment": "$2000 for the workshop"
+    },
+    {
+      "id": 30,
+      "specialist_id": 0,
+      "job_title": "Tour Guiding Services for Cultural Tour",
+      "description": "Guide tourists on a cultural tour of the city.",
+      "duration": "1 week",
+      "location": "Cultural Sites",
+      "payment": "$2500 for the week"
+    }
    ]
 }
