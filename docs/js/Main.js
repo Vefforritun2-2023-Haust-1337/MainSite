@@ -1,5 +1,47 @@
 "use strict"
+//Firbase code--------------------------------------------------------------------------------
+  // Import the functions you need from the SDKs you need
 
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+  import { getDatabase, ref, child, get , onValue} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+  // Your web app's Firebase configuration
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyATLLQ3hG2ukKrzemVdo6XZCiShXkiz6R4",
+
+    authDomain: "orange-93398.firebaseapp.com",
+
+    databaseURL: "https://orange-93398-default-rtdb.europe-west1.firebasedatabase.app",
+
+    projectId: "orange-93398",
+
+    storageBucket: "orange-93398.appspot.com",
+
+    messagingSenderId: "989680356844",
+
+    appId: "1:989680356844:web:97a591c7772be51a0704c9",
+
+    measurementId: "G-7KS3MVSDG0"
+
+  };
+
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  const data = getDatabase(app);
+//--------------------------------------------------------------------
 const specialList = document.querySelector("#Specialists");
 const specialRegi = document.querySelector("#Register");
 const navbar = document.querySelector("#Navbar");
@@ -72,10 +114,12 @@ async function loadJson(file = "/data.json")
     }
 }
 
-function startContent(data,key)
+function startContent(data)
 {
     let entries = [];
-    data[key].forEach(elem =>{
+    console.log(data);
+    data.forEach(elem =>{
+        console.log(elem);
         let entry = creoDiv("entry")
         let contentEntry = [
             creoDiv("id",elem["id"]),
@@ -94,9 +138,22 @@ function startContent(data,key)
     return entries;
 }
 
-async function creoDatalist(zone = creoDiv(),dataset = "specialists",data = "./data/Serfaedinga.json")
-{
-    let jsonData = await loadJson(data);
+async function creoDatalist(zone = creoDiv(),dataset = "specialists")
+{   
+    let jsonData = [];
+    const dbRef = ref(getDatabase());
+    get(child(dbRef, `${dataset}`)).then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log("data read");
+        snapshot.val().forEach(element => {
+            jsonData.push(element);
+        });
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
     let list = creoDiv("list");
     let entries = startContent(jsonData,dataset);
     entries.forEach(elem =>{
