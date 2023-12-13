@@ -890,3 +890,35 @@ label > .label-body {
     border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
  }
  
+
+
+/*----------------------*/
+
+ .Specialists{
+  padding: 5%;
+ }
+
+
+
+/*-------------*/
+.entry{
+  color: #FFF;
+  background-color: #d6671c;
+  border-style: solid;
+  border-color: white;
+  padding: 5%;
+  align-items: center;
+  border-radius: 25px;
+
+  
+
+}
+
+.entry:hover {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255,149,0);
+  }
+
+
+
+

@@ -78,7 +78,7 @@ function startContent(data,key)
     data[key].forEach(elem =>{
         let entry = creoDiv("entry")
         let contentEntry = [
-            creoDiv("id",elem["id"]),
+            /*creoDiv("id",elem["id"]),*/
             creoDiv("name",elem["name"]),
             creoDiv("specialty",elem["specialty"]),
             creoDiv("location",elem["location"]),
@@ -97,7 +97,7 @@ function startContent(data,key)
 async function specialist(data = "/docs/data/Serfaedinga.json")
 {
     let jsonData = await loadJson(data);
-    let list = creoDiv("list");
+    let list = creoDiv("col-3");
     let entries = startContent(jsonData,"specialists");
     entries.forEach(elem =>{
         list.appendChild(elem["element"])
@@ -114,4 +114,5 @@ if (specialList)
 {
     specialist();
 }
+
 
