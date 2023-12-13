@@ -197,8 +197,9 @@ async function creoDatalist(zone = creoElem(),dataset = "specialists")
 function register()
 {
     let elems = [
-        creoElem("paragrah","Register as a specialist here."),
-        creoElem("button","Register","","","./specialistsForm.html")];
+        creoElem("paragrah","Register as a specialist here"),
+        creoElem("button-49","REGISTER","","","./specialistsForm.html")];
+        elems[1].role = "button";
     regoElem(elems,specialRegi);
 }
 
