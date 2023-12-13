@@ -198,7 +198,7 @@ function register()
 {
     let elems = [
         creoElem("paragrah","Register as a specialist here."),
-        creoElem("button","Register","./specialistsForm.html")];
+        creoElem("button","Register","","","./specialistsForm.html")];
     regoElem(elems,specialRegi);
 }
 
