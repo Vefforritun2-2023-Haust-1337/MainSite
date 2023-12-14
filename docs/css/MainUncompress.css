@@ -892,7 +892,7 @@ label > .label-body {
  
 
 
-/*----------------------*/
+/*-------------serik nyjir klassar---------*/
 
  .Specialists{
   /*padding: 5%;*/
@@ -933,6 +933,19 @@ label > .label-body {
 .temp{
   text-align: center;
 }
+
+.redbord{
+  border-style: solid;
+  border-width: 5px;
+  border-color: red;
+}
+
+.greenbord{
+  border-style: solid;
+  border-width: 5px;
+  border-color: green;
+}
+
 
 
 
