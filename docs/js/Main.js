@@ -50,14 +50,9 @@ const leaderboard = document.querySelector("#Board");
 const specialForm = document.querySelector("#specialform");
 
 
-function creoElem(klas = "",text = "",imag = "",type = "",href = ""){
+function creoElem(klas = "",text = "",imag = "",href = ""){
     let elem;
-    if (!(type === ""))
-    {
-        elem = document.createElement("input");
-        elem.type = type;
-    }
-    else if (!(href === ""))
+    if (!(href === ""))
     {
         elem = document.createElement("a");
         elem.href = href;
@@ -116,15 +111,44 @@ function regoElem(children = [], paren)
         paren.appendChild(child);
     })
 }
-
+function creoForm(klas="",id="")
+{
+    let elem = document.createElement("form");
+    elem.className = klas;
+    elem.id = id;
+    return elem;
+}
+function creoSmall(klas="",id="")
+{
+    let smallElem = document.createElement("small");
+    smallElem.className = klas;
+    smallElem.id = id;
+    return smallElem;
+}
+function creoInput(klas="",id="",type="",message="",title="")
+{
+    let fieldElem = document.createElement("div");
+    let inputElem = document.createElement("input");
+    inputElem.className = klas;
+    inputElem.id = id;
+    inputElem.type = type;
+    inputElem.placeholder = message;
+    let titleElem = document.createElement("div");
+    titleElem.className = `${klas}Title`;
+    titleElem.className = `${id}Title`;
+    titleElem.textContent = title;
+    regoElem([titleElem,inputElem],fieldElem);
+    fieldElem.id = `${id}Field`;
+    return fieldElem;
+}
 function creoNavBar()
 {
     let navBarDiv = creoElem("topnav");
     let hrefs = [
-        creoElem("icon-home3","Heim","","","./MainIndex.html"),
-        creoElem("icon-info","Um Okkur","","","./aboutMe.html"),
-        creoElem("icon-user-tie","Sérfræðingar","","","./specialists.html"),
-        creoElem("icon-bubble","Verkefni","","","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
+        creoElem("icon-home3","Heim","","./MainIndex.html"),
+        creoElem("icon-info","Um Okkur","","./aboutMe.html"),
+        creoElem("icon-user-tie","Sérfræðingar","","./specialists.html"),
+        creoElem("icon-bubble","Verkefni","","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
     ]
     regoElem(hrefs,navBarDiv);
     navbar.appendChild(navBarDiv);
@@ -198,8 +222,8 @@ function register()
 {
     let elems = [
         creoElem("paragrah","Register as a specialist here"),
-        creoElem("button-49","REGISTER","","","./specialistsForm.html")];
-        elems[1].role = "button";
+        creoElem("button-49","Register","","./specialistsForm.html")];
+    elems[1].role = "button";
     regoElem(elems,specialRegi);
 }
 
@@ -214,12 +238,95 @@ function writeData(dataset = "specialists",data = {})
   
 }
 
+function showMessage(input, message, type) {
+	// get the small element and set the message
+	const msg = input.parentNode.querySelector("small");
+	msg.innerText = message;
+	// update the class for the input
+	input.className = type ? "success" : "error";
+	return type;
+}
+
+function showError(input, message) {
+	return showMessage(input, message, false);
+}
+
+function showSuccess(input) {
+	return showMessage(input, "", true);
+}
+
+function validateEmail(input, requiredMsg, invalidMsg) {
+	// check if the value is not empty
+	if (!hasValue(input, requiredMsg)) {
+		return false;
+	}
+	// validate email format
+	const emailRegex =
+		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	const email = input.value.trim();
+	if (!emailRegex.test(email)) {
+		return showError(input, invalidMsg);
+	}
+	return true;
+}
+
+function validatePhone(input, requiredMsg, invalidMsg) {
+	// check if the value is not empty
+	if (!hasValue(input, requiredMsg)) {
+		return false;
+	}
+    
+    const phoneRegex =
+        /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+    
+    const phone = input.value.trim();
+    if (!(phoneRegex.test(phone))) {
+        return showError(input, invalidMsg)
+    }
+    return true;
+}
+
+function hasValue(input, message) {
+	if (input.value.trim() === "") {
+		return showError(input, message);
+	}
+	return showSuccess(input);
+}
+
 function creoRegiform(zone = creoElem(),dataset = "specialists")
 {
-    let elem = creoElem("userinput");
+    let elem = creoForm("specialRegi","form");
     if (dataset = "specialists")
     {
+        //name
+        let field = creoInput("Input","nameInput","text","Please enter name","Name");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
 
+        //speciality
+        field = creoInput("Input","specialInput","text","Please enter speciality","Speciality");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //location
+        field = creoInput("Input","localeInput","text","Please enter location","Location");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //email
+        field = creoInput("Input","emailInput","email","Please enter email","Email");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //phonenumber
+        field = creoInput("Input","telInput","tel","Please enter phone","Phone Number");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //submit
+        field = creoInput("Submit","Submit","submit","","");
+        elem.appendChild(field);
     }
     else if (dataset = "contracts")
     {
@@ -251,4 +358,15 @@ if (leaderboard)
 if (specialForm)
 {
     creoRegiform(specialForm);
+    const form = document.querySelector("#form");
+
+    const FIELD_REQUIRED = "This field cannot be empty";
+    const PHONE_INVALID = "Please enter a correct phone number";
+    const EMAIL_INVALID = "Please enter a correct email address format";
+
+    form.addEventListener("submit",function (eve) {
+        eve.preventDefault();
+        console.log("Submitted",eve);
+        console.log(form,form.elements);
+    });
 }
