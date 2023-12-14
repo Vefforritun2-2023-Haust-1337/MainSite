@@ -966,6 +966,32 @@ label > .label-body {
 
 
 
+
+.whitetext2{
+  color: #FFF;
+  text-align: center;
+  padding-top: 5%;
+
+}
+
+
+
+
+
+
+.formiscenter{
+  position:  fixed;
+  top : 200px;
+  left: 34%;
+  width: 500px;
+  height:500px;
+  color: rgb(255,149,0);
+  text-align: center;
+  /*border:1px solid black;*/
+}
+
+
+
   /*HUGE BUTTON HERE LETS GO I LOVE ADDING MORE CSS TO MY INCOMPREHENSABLE CODE*/
 
 /* CSS */
