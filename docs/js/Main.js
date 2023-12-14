@@ -227,13 +227,32 @@ function register()
     regoElem(elems,specialRegi);
 }
 
-function writeData(dataset = "specialists",data = {})
+function writeData(data = {},dataset = "specialists")
 {
     const db = getDatabase();
-    set(ref(db, `${dataset}`), {
-      username: name,
-      email: email,
-      profile_picture : imageUrl
+    const dbref = ref(getDatabase());
+    console.log("writeData.exe");
+    let id;
+    get(child(dbref, `${dataset}`)).then((snapshot) => {
+        console.log("start read")
+        if (snapshot.exists()) {
+            id = snapshot.val()["length"]+1;
+            console.log(id)
+            set(ref(db, `${dataset}/${id-1}`), {
+              name: data["name"],
+              contact: { 
+                email: data["contact"]["email"],
+                phone: data["contact"]["phone"]},
+              location: data["location"],
+              specialty: data["specialty"],
+              id: id
+            });
+        }
+        else {
+          console.log("No data available");
+        }
+    }).catch((error) => {
+        console.error(error);
     });
   
 }
@@ -242,8 +261,9 @@ function showMessage(input, message, type) {
 	// get the small element and set the message
 	const msg = input.parentNode.querySelector("small");
 	msg.innerText = message;
+    msg.className = type ? "" : "redtext";
 	// update the class for the input
-	input.className = type ? "success" : "error";
+	input.className = type ? "succes" : "error";
 	return type;
 }
 
@@ -294,33 +314,38 @@ function hasValue(input, message) {
 	return showSuccess(input);
 }
 
+function intellegoForm(formID = "",form)
+{
+    return form.elements[formID].value;
+}
+
 function creoRegiform(zone = creoElem(),dataset = "specialists")
 {
     let elem = creoForm("specialRegi","form");
-    if (dataset = "specialists")
+    if (dataset === "specialists")
     {
         //name
-        let field = creoInput("Input","nameInput","text","Please enter name","Name");
+        let field = creoInput("defaultInput","nameInput","text","Please enter name","Name");
         field.appendChild(creoSmall("","message"));
         elem.appendChild(field);
 
         //speciality
-        field = creoInput("Input","specialInput","text","Please enter speciality","Speciality");
+        field = creoInput("defaultInput","specialInput","text","Please enter speciality","Speciality");
         field.appendChild(creoSmall("","message"));
         elem.appendChild(field);
 
         //location
-        field = creoInput("Input","localeInput","text","Please enter location","Location");
+        field = creoInput("defaultInput","localeInput","text","Please enter location","Location");
         field.appendChild(creoSmall("","message"));
         elem.appendChild(field);
 
         //email
-        field = creoInput("Input","emailInput","email","Please enter email","Email");
+        field = creoInput("defaultInput","emailInput","email","Please enter email","Email");
         field.appendChild(creoSmall("","message"));
         elem.appendChild(field);
 
         //phonenumber
-        field = creoInput("Input","telInput","tel","Please enter phone","Phone Number");
+        field = creoInput("defaultInput","telInput","tel","Please enter phone","Phone Number");
         field.appendChild(creoSmall("","message"));
         elem.appendChild(field);
 
@@ -328,7 +353,7 @@ function creoRegiform(zone = creoElem(),dataset = "specialists")
         field = creoInput("Submit","Submit","submit","","");
         elem.appendChild(field);
     }
-    else if (dataset = "contracts")
+    else if (dataset === "contracts")
     {
 
     }
@@ -368,5 +393,33 @@ if (specialForm)
         eve.preventDefault();
         console.log("Submitted",eve);
         console.log(form,form.elements);
+
+        let inputFields = [];
+        for (let index = 0; index < form.elements['length']-1; index++)
+        {
+            inputFields.push(form.elements[index]);
+        }
+
+        let emptyField = true;
+        inputFields.forEach(elem => {
+            emptyField = hasValue(elem, FIELD_REQUIRED);
+        });
+        let validPhone = validatePhone(form.elements['telInput'],FIELD_REQUIRED,PHONE_INVALID);
+        let validEmail = validateEmail(form.elements['emailInput'],FIELD_REQUIRED,EMAIL_INVALID);
+
+        if (emptyField && validPhone && validEmail)
+        {
+            let entry = {
+                "contact": {
+                    "email": intellegoForm("emailInput",form),
+                    "phone": intellegoForm("telInput",form)
+                },
+                "location": intellegoForm("localeInput",form),
+                "name": intellegoForm("nameInput",form),
+                "specialty": intellegoForm("specialInput",form)
+            }
+            console.log(entry);
+            writeData(entry);
+        };
     });
 }
