@@ -45,9 +45,10 @@
 const specialList = document.querySelector("#Specialists");
 const specialRegi = document.querySelector("#Register");
 const navbar = document.querySelector("#Navbar");
-const taskList = document.querySelector("#Tasks");
+const taskSubmit = document.querySelector("#Contract");
 const leaderboard = document.querySelector("#Board");
 const specialForm = document.querySelector("#specialform");
+const taskForm = document.querySelector("#verkform")
 
 
 function creoElem(klas = "",text = "",imag = "",href = ""){
@@ -148,10 +149,28 @@ function creoNavBar()
         creoElem("icon-home3","Heim","","./MainIndex.html"),
         creoElem("icon-info","Um Okkur","","./aboutMe.html"),
         creoElem("icon-user-tie","Sérfræðingar","","./specialists.html"),
-        creoElem("icon-bubble","Verkefni","","https://vefforritun2-2023-haust-1337.github.io/MainSite/MainIndex.html")
+        creoElem("icon-bubble","Verkefni","","./verkefni.html")
     ]
     regoElem(hrefs,navBarDiv);
     navbar.appendChild(navBarDiv);
+}
+function creoTextArea(klas="",id="",message="",title="")
+{
+    let fieldElem = document.createElement("div");
+    let inputElem = document.createElement("textarea");
+    inputElem.className = klas;
+    inputElem.id = id;
+    inputElem.placeholder = message;
+    inputElem.rows = 10;
+    inputElem.cols = 22;
+    inputElem.wrap = "hard";
+    let titleElem = document.createElement("div");
+    titleElem.className = `${klas}Title`;
+    titleElem.className = `${id}Title`;
+    titleElem.textContent = title;
+    regoElem([titleElem,inputElem],fieldElem);
+    fieldElem.id = `${id}Field`;
+    return fieldElem;
 }
 
 /*----------unused---------------
@@ -176,14 +195,29 @@ function startContent(data,dataset)
     let entries = [];
     data.forEach(elem =>{
         let entry = creoElem("entry")
-        let contentEntry = [
-            /*creoElem("id",elem["id"]),*/
-            creoElem("name",elem["name"]),
-            creoElem("specialty",elem["specialty"]),
-            creoElem("location",elem["location"]),
-            creoElem("email",elem["contact"]["email"]),
-            creoElem("phone",elem["contact"]["phone"])
-        ];
+        let contentEntry;
+        if (dataset === "specialists")
+        {
+            contentEntry = [
+                /*creoElem("id",elem["id"]),*/
+                creoElem("name",elem["name"]),
+                creoElem("specialty",elem["specialty"]),
+                creoElem("location",elem["location"]),
+                creoElem("email",elem["contact"]["email"]),
+                creoElem("phone",elem["contact"]["phone"])
+            ];
+        }
+        else 
+        {
+            contentEntry = [
+                creoElem("jobTitle",elem["job_title"]),
+                creoElem("desc",elem["description"]),
+                creoElem("locale",elem["location"]),
+                creoElem("duration",elem["duration"]),
+                creoElem("pay",elem["payment"]),
+                creoElem("avail",elem["specialist_id"] == 0 ? `Open Position`:`Already Fufilled`)
+            ];
+        }
         regoElem(contentEntry,entry);
         entries.push({
             data:elem,
@@ -218,13 +252,13 @@ async function creoDatalist(zone = creoElem(),dataset = "specialists")
     });
 }
 
-function register()
+function Register(paren,href)
 {
     let elems = [
-        creoElem("paragrah","Register as a specialist here"),
-        creoElem("button-49","Register","","./specialistsForm.html")];
+        creoElem("paragrah",paren == specialForm ? `Register as a Specilist here` : `Submit a contract here`),
+        creoElem("button-49",paren == specialForm ? `Register`:`Submit`,"",`${href}`)];
     elems[1].role = "button";
-    regoElem(elems,specialRegi);
+    regoElem(elems,paren);
 }
 
 function writeData(data = {},dataset = "specialists")
@@ -238,15 +272,28 @@ function writeData(data = {},dataset = "specialists")
         if (snapshot.exists()) {
             id = snapshot.val()["length"]+1;
             console.log(id)
-            set(ref(db, `${dataset}/${id-1}`), {
-              name: data["name"],
-              contact: { 
-                email: data["contact"]["email"],
-                phone: data["contact"]["phone"]},
-              location: data["location"],
-              specialty: data["specialty"],
-              id: id
-            });
+            if (dataset === "specialists"){
+                set(ref(db, `${dataset}/${id-1}`), {
+                    name: data["name"],
+                    contact: { 
+                        email: data["contact"]["email"],
+                        phone: data["contact"]["phone"]},
+                    id: id,
+                    location: data["location"],
+                    specialty: data["specialty"]
+                });
+            }
+            else if (dataset === "contracts"){
+                set(ref(db, `${dataset}/${id-1}`), {
+                    description: data["description"],
+                    duration: data["duration"],
+                    id: id,
+                    job_title: data["job_title"],
+                    location: data["location"],
+                    payment: data["payment"],
+                    specialist_id: 0
+                });
+            }
         }
         else {
           console.log("No data available");
@@ -355,6 +402,34 @@ function creoRegiform(zone = creoElem(),dataset = "specialists")
     }
     else if (dataset === "contracts")
     {
+        //name
+        let field = creoInput("defaultInput","jTitleInput","text","Please enter Job Title","Job Title");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //speciality
+        field = creoInput("defaultInput","timeInput","text","Please enter Duration","Duration");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //location
+        field = creoInput("defaultInput","localeInput","text","Please enter location","Location");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //email
+        field = creoInput("defaultInput","payInput","text","Please enter the Reward","Reward");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //phonenumber
+        field = creoTextArea("defaultInput","descInput","Please enter futher information regarding the job","Description");
+        field.appendChild(creoSmall("","message"));
+        elem.appendChild(field);
+
+        //submit
+        field = creoInput("Submit","Submit","submit","","");
+        elem.appendChild(field);
 
     }
     zone.appendChild(elem);
@@ -372,12 +447,7 @@ if (specialList)
 
 if(specialRegi)
 {
-    register();
-}
-
-if (leaderboard)
-{
-    creoDatalist(leaderboard,"contracts");
+    Register(specialRegi,"./specialistsForm.html");
 }
 
 if (specialForm)
@@ -420,6 +490,54 @@ if (specialForm)
             }
             console.log(entry);
             writeData(entry);
+        };
+    });
+}
+
+if (leaderboard)
+{
+    creoDatalist(leaderboard,"contracts");
+}
+
+if(taskSubmit)
+{
+    Register(taskSubmit,"./verkefniFrom.html");
+}
+
+if (taskForm)
+{
+    creoRegiform(taskForm,"contracts");
+    const form = document.querySelector("#form");
+
+    const FIELD_REQUIRED = "This field cannot be empty";
+
+    form.addEventListener("submit",function (eve) {
+        eve.preventDefault();
+        console.log("Submitted",eve);
+        console.log(form,form.elements);
+
+        let inputFields = [];
+        for (let index = 0; index < form.elements['length']-1; index++)
+        {
+            inputFields.push(form.elements[index]);
+        }
+
+        let emptyField = true;
+        inputFields.forEach(elem => {
+            emptyField = hasValue(elem, FIELD_REQUIRED);
+        });
+
+        if (emptyField)
+        {
+            let entry = {
+                "description": intellegoForm("descInput",form),
+                "duration": intellegoForm("timeInput",form),
+                "job_title": intellegoForm("jTitleInput",form),
+                "location": intellegoForm("localeInput",form),
+                "payment": intellegoForm("payInput",form)
+            }
+            console.log(entry);
+            writeData(entry,"contracts");
         };
     });
 }
