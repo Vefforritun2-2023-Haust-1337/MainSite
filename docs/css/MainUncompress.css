@@ -940,18 +940,6 @@ label > .label-body {
   border-color: red;
 }
 
-.defaultInput
-    {
-     width: 100px;
-     height:25px;
-     padding: 5px;
-    }
-
-.error
-{
- border:1px solid red;
-}
-
 
 .greenbord{
   border-style: solid;
